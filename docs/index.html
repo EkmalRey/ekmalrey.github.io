@@ -7,6 +7,9 @@
 
   <link rel="icon" href="assets/favicon.png" type="image/png">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
@@ -18,8 +21,8 @@
   <div id="loader">Loading...</div>
 
   <nav>
-    <div><strong>EkmalRey</strong></div>
-    <div>
+    <div class="logo"><strong>EkmalRey</strong></div>
+    <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
@@ -27,44 +30,61 @@
     </div>
   </nav>
 
-  <section id="home" data-aos="fade-up">
-    <h2>Hi 👋, I'm Ekmal</h2>
-    <h4>Teaching machines to think, one algorithm at a time!</h4>
-    <p>AI Enthusiast | Data Scientist | Computer Vision Specialist</p>
-    <a href="#about" class="btn">Discover More</a>
-  </section>
+  <main>
+    <section id="home" class="section" data-aos="fade-up">
+      <h2>Hi 👋, I'm Ekmal</h2>
+      <h4>Teaching machines to think, one algorithm at a time!</h4>
+      <p>AI Enthusiast | Data Scientist | Computer Vision Specialist</p>
+      <a href="#about" class="btn">Discover More</a>
+    </section>
 
-  <section id="about" data-aos="fade-up">
-    <h1>About Me</h1>
-    <p>🇮🇩 Indonesia | Bachelor of Data Science - Telkom University</p>
-    <p>Open to internships, research, and full-time opportunities.</p>
-    <pre style="text-align: left; max-width: 600px; overflow-x: auto;">
-EkmalRey = {
-  language: ["Python", "SQL", "Go", "Java", "C++"],
-  tools: ["TensorFlow", "PyTorch", "Pandas", "Numpy"],
-  expertise: ["Machine Learning", "Computer Vision", "Data Science"]
-}
-    </pre>
-  </section>
+    <section id="about" class="section" data-aos="fade-up">
+      <h1>About Me</h1>
+      <p>🇮🇩 Indonesia | Bachelor of Data Science - Telkom University</p>
+      <p>Open to internships, research, and full-time opportunities.</p>
 
-  <section id="projects" data-aos="fade-up">
-    <h1>My Projects</h1>
-    <p><a href="https://github.com/EkmalRey/ImgClassificationPipeline" target="_blank">Image Classification Pipeline 🚀</a></p>
-    <p><a href="https://github.com/Farrellhrs/BackendInventoryBarang" target="_blank">Backend Inventory Barang 🗄️</a></p>
-  </section>
+      <div class="about-card">
+        <h3>Languages</h3>
+        <p>Python, SQL, Go, Java, C++</p>
 
-  <section id="contact" data-aos="fade-up">
-    <h1>Contact</h1>
-    <p>Email: <a href="mailto:ekmalreyhan@gmail.com">ekmalreyhan@gmail.com</a></p>
-    <div>
-      <a href="https://instagram.com/EkmalRey" target="_blank">Instagram</a> |
-      <a href="https://linkedin.com/in/ekmalrey" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/EkmalRey" target="_blank">GitHub</a>
-    </div>
-  </section>
+        <h3>Tools</h3>
+        <p>TensorFlow, PyTorch, Pandas, Numpy</p>
+
+        <h3>Expertise</h3>
+        <p>Machine Learning, Computer Vision, Data Science</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section" data-aos="fade-up">
+      <h1>My Projects</h1>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Image Classification Pipeline 🚀</h3>
+          <p>End-to-end image classification using modern ML practices.</p>
+          <a href="https://github.com/EkmalRey/ImgClassificationPipeline" target="_blank">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Backend Inventory Barang 🗄️</h3>
+          <p>Backend system to manage inventory efficiently.</p>
+          <a href="https://github.com/Farrellhrs/BackendInventoryBarang" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" data-aos="fade-up">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:ekmalreyhan@gmail.com">ekmalreyhan@gmail.com</a></p>
+      <div class="social-links">
+        <a href="https://instagram.com/EkmalRey" target="_blank">Instagram</a> |
+        <a href="https://linkedin.com/in/ekmalrey" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/EkmalRey" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 EkmalRey. Built with passion and caffeine.
+    <p>© 2025 EkmalRey. Built with passion and caffeine ☕</p>
   </footer>
 
   <!-- AOS JS -->
