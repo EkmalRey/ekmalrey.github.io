@@ -1,75 +1,94 @@
 /* Reset & Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  :root {
-    --bg: #ffffff;
-    --text: #111111;
-  }
-  .dark {
-    --bg: #111111;
-    --text: #ffffff;
-  }
-  
-  /* Loader */
-  #loader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    z-index: 9999;
-  }
-  
-  /* Navbar */
-  nav {
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background: transparent;
-    z-index: 1000;
-  }
-  nav a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: bold;
-    margin-left: 1rem;
-  }
-  
-  /* Section */
-  section {
-    min-height: 100vh;
-    padding: 6rem 2rem 2rem;
-    text-align: center;
-  }
-  
-  /* Button */
-  .btn {
-    padding: 10px 20px;
-    margin-top: 20px;
-    background: #0077B5;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+}
+.dark {
+  --bg: #111111;
+  --text: #ffffff;
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  z-index: 9999;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 6rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1, h2, h4, p {
+  margin-bottom: 1rem;
+}
+
+/* Toggle */
+#toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Button */
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: #0077B5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
