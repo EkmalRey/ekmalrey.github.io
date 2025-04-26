@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ekmal Rey | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0ef;
+      --background: #0a0a0a;
+      --text: #ffffff;
+      --accent: #1f1f1f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: var(--accent);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .socials a {
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .socials img {
+      height: 40px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--accent);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .skills, .experience {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: var(--background);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--accent);
+      margin-top: 50px;
+    }
+
+    .stats img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hi 👋, I'm Ekmal</h1>
+  <p>Teaching machines to think, one algorithm at a time!</p>
+  <div class="socials">
+    <a href="https://instagram.com/EkmalRey" target="_blank">
+      <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/in/ekmalrey/" target="_blank">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/EkmalRey" target="_blank">
+      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    </a>
+  </div>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    <p>AI Enthusiast | Data Scientist | Computer Vision Specialist</p>
+    <p>Exploring the intersection of Data, Intelligence, and Innovation.</p>
+    <p><strong>Nationality:</strong> 🇮🇩 Indonesia</p>
+    <p><strong>Education:</strong> Third-year Data Science Student at Telkom University</p>
+    <p><strong>Availability:</strong> Open to internships, research roles, and full-time opportunities</p>
+    <p><strong>Contact:</strong> <a href="mailto:ekmalreyhan@gmail.com" style="color: var(--primary);">ekmalreyhan@gmail.com</a></p>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card">
+      <h3>Languages</h3>
+      <p>Python, SQL, Go, Java, C++</p>
+    </div>
+    <div class="card">
+      <h3>Tools</h3>
+      <p>TensorFlow, PyTorch, BeautifulSoup, Pandas, Matplotlib, Numpy</p>
+    </div>
+    <div class="card">
+      <h3>Expertise</h3>
+      <p>Machine Learning, Computer Vision, Data Science, Data Analytics, Web Scraping</p>
+    </div>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="experience">
+    <div class="card">
+      <h3>Research</h3>
+      <p>Research Assistant at AILO Center of Excellence</p>
+    </div>
+    <div class="card">
+      <h3>Leadership</h3>
+      <ul>
+        <li>Head of Human Resources Development at HIMA Data Science Telkom University</li>
+        <li>Manager at TelU Esports</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>GitHub Stats</h2>
+  <div class="stats">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ekmalrey&locale=en&layout=compact&card_width=400&langs_count=6&theme=transparent&hide_border=true" alt="Top Languages">
+    <img src="https://i.imgflip.com/9g1lz9.gif" alt="Cool Animation">
+  </div>
+
+  <a class="button" href="https://github.com/EkmalRey" target="_blank">See More on GitHub</a>
+
+</section>
+
+<footer>
+  © 2025 Ekmal Rey | Built with ❤️ and Passion
+</footer>
+
+</body>
+</html>
