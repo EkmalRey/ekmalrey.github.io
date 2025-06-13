@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+<head>  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>EkmalRey | Data Scientist Portfolio</title>
 
   <link rel="icon" href="assets/favicon.png" type="image/png">
-
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -18,80 +21,84 @@
 </head>
 
 <body>
-  <div id="loader">Loading...</div>
-
+  <div id="loader">
+    <div class="loader-spinner"></div>
+    <div>Loading your experience...</div>
+  </div>
   <nav>
-    <div class="logo"><strong>EkmalRey</strong></div>
+    <a href="#home" class="logo">EkmalRey</a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <span id="toggle">🌙</span>
+      <button id="toggle">🌙</button>
     </div>
   </nav>
 
-  <main>
-    <section id="home" class="section" data-aos="fade-up">
+  <main>    <section id="home" class="section float-animation" data-aos="fade-up">
       <h2>Hi 👋, I'm Ekmal</h2>
-      <h4>Teaching machines to think, one algorithm at a time!</h4>
-      <p>AI Enthusiast | Data Scientist | Computer Vision Specialist</p>
-      <a href="#about" class="btn">Discover More</a>
-    </section>
-
-    <section id="about" class="section" data-aos="fade-up">
+      <h4>Teaching machines to think, one algorithm at a time</h4>
+      <p>AI Enthusiast • Data Scientist • Computer Vision Specialist</p>
+      <a href="#about" class="btn">Discover My Journey</a>
+    </section>    <section id="about" class="section" data-aos="fade-up">
       <h1>About Me</h1>
-      <p>🇮🇩 Indonesia | Bachelor of Data Science - Telkom University</p>
-      <p>Open to internships, research, and full-time opportunities.</p>
+      <p>🇮🇩 Based in Indonesia • Bachelor of Data Science @ Telkom University</p>
+      <p>Passionate about turning complex data into meaningful insights and building intelligent systems that make a difference. Currently seeking opportunities in AI/ML engineering, data science, and research positions.</p>
 
       <div class="about-card">
-        <h3>Languages</h3>
-        <p>Python, SQL, Go, Java, C++</p>
+        <h3>Programming Languages</h3>
+        <p>Python • SQL • Go • Java • C++ • JavaScript</p>
 
-        <h3>Tools</h3>
-        <p>TensorFlow, PyTorch, Pandas, Numpy</p>
+        <h3>ML/AI Tools & Frameworks</h3>
+        <p>TensorFlow • PyTorch • Scikit-learn • Pandas • NumPy • OpenCV</p>
 
-        <h3>Expertise</h3>
-        <p>Machine Learning, Computer Vision, Data Science</p>
+        <h3>Specializations</h3>
+        <p>Machine Learning • Computer Vision • Data Science • Backend Development</p>
       </div>
-    </section>
-
-    <section id="projects" class="section" data-aos="fade-up">
-      <h1>My Projects</h1>
+    </section>    <section id="projects" class="section" data-aos="fade-up">
+      <h1>Featured Projects</h1>
       <div class="projects-grid">
-        <div class="project-card">
-          <h3>Image Classification Pipeline 🚀</h3>
-          <p>End-to-end image classification using modern ML practices.</p>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>🚀 Image Classification Pipeline</h3>
+          <p>End-to-end machine learning pipeline for image classification using modern deep learning practices. Features automated data preprocessing, model training, and deployment capabilities.</p>
           <a href="https://github.com/EkmalRey/ImgClassificationPipeline" target="_blank">View Project</a>
         </div>
 
-        <div class="project-card">
-          <h3>Backend Inventory Barang 🗄️</h3>
-          <p>Backend system to manage inventory efficiently.</p>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>🗄️ Backend Inventory System</h3>
+          <p>Robust backend system for efficient inventory management with real-time tracking, automated alerts, and comprehensive reporting features.</p>
           <a href="https://github.com/Farrellhrs/BackendInventoryBarang" target="_blank">View Project</a>
         </div>
         
-        <div class="project-card">
-          <h3>Medical Check-Up Management System</h3>
-          <p>Go-based CLI system for managing patient records and packages</p>
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>🏥 Medical Management CLI</h3>
+          <p>Go-based command-line interface for managing patient records, medical packages, and healthcare workflows with secure data handling.</p>
           <a href="https://github.com/EkmalRey/MedicalCheckUp" target="_blank">View Project</a>
         </div>
-
       </div>
-    </section>
-
-    <section id="contact" class="section" data-aos="fade-up">
-      <h1>Contact</h1>
-      <p>Email: <a href="mailto:ekmalreyhan@gmail.com">ekmalreyhan@gmail.com</a></p>
-      <div class="social-links">
-        <a href="https://instagram.com/EkmalRey" target="_blank">Instagram</a> |
-        <a href="https://linkedin.com/in/ekmalrey" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/EkmalRey" target="_blank">GitHub</a>
+    </section>    <section id="contact" class="section" data-aos="fade-up">
+      <h1>Let's Connect</h1>
+      <div class="contact-content">
+        <p class="contact-email">
+          Ready to collaborate? Reach out:
+          <a href="mailto:ekmalreyhan@gmail.com">ekmalreyhan@gmail.com</a>
+        </p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/ekmalrey" target="_blank">
+            💼 LinkedIn
+          </a>
+          <a href="https://github.com/EkmalRey" target="_blank">
+            💻 GitHub
+          </a>
+          <a href="https://instagram.com/EkmalRey" target="_blank">
+            📷 Instagram
+          </a>
+        </div>
       </div>
     </section>
   </main>
-
   <footer>
-    <p>© 2025 EkmalRey. Built with passion and caffeine ☕</p>
+    <p>© 2025 EkmalRey • Crafted with passion and precision ✨</p>
   </footer>
 
   <!-- AOS JS -->
