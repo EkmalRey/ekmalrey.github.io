@@ -1,4 +1,3 @@
-
 // Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.getElementById('navbar');
@@ -29,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update active nav link
             navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
-              // Close mobile menu if open
+            this.classList.add('active');            // Close mobile menu if open
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            navbar.classList.remove('menu-open');
         });
     });
 
@@ -67,6 +66,13 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+            
+            // Add/remove menu-open class to navbar for blur control
+            if (navMenu.classList.contains('active')) {
+                navbar.classList.add('menu-open');
+            } else {
+                navbar.classList.remove('menu-open');
+            }
         });
     }
 
@@ -111,8 +117,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe all sections and cards
     document.querySelectorAll('.section, .glass-card').forEach(el => {
         observer.observe(el);
-    });
+    });    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    // Combined scroll handler
+    function handleAllScrollEvents() {
+        handleScroll();
+        
+        // Back to top button visibility
+        if (backToTopButton) {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        }
+    }
+    
+    if (backToTopButton) {
+        // Scroll to top when clicked
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Scroll event listener
+    window.addEventListener('scroll', handleAllScrollEvents);
 
     // Initialize
-    handleScroll();
+    handleAllScrollEvents();
 });

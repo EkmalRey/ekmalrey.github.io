@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ekmal Reyhan - Data Scientist & ML Engineer</title>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ekmal Reyhan - Data Scientist & ML Engineer</title>
     <meta name="description" content="Data Science student and ML Engineer specializing in Computer Vision, Machine Learning, and Backend Development">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -74,15 +73,9 @@
                         </svg>
                         Download Resume
                     </a>
-                    <button class="btn btn-secondary" onclick="scrollToSection('about')">View My Work</button>
-                </div>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">View My Work</button>                </div>
             </div>
         </div>
-        <button class="scroll-indicator" onclick="scrollToSection('about')">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.41 8.84L12 13.42l4.59-4.58L18 10.25l-6 6-6-6 1.41-1.41z"/>
-            </svg>
-        </button>
     </section>
 
     <!-- About Section -->
@@ -244,7 +237,6 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/EkmalRey/ImgClassificationPipeline" class="btn btn-primary btn-sm">View Code</a>
-                            <a href="https://github.com/EkmalRey/ImgClassificationPipeline" class="btn btn-secondary btn-sm">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -264,7 +256,6 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/Farrellhrs/BackendInventoryBarang" class="btn btn-primary btn-sm">View Code</a>
-                            <a href="https://github.com/Farrellhrs/BackendInventoryBarang" class="btn btn-secondary btn-sm">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -284,27 +275,6 @@
                         </div>
                         <div class="project-buttons">
                             <a href="https://github.com/EkmalRey/MedicalCheckUp" class="btn btn-primary btn-sm">View Code</a>
-                            <a href="https://github.com/EkmalRey/MedicalCheckUp" class="btn btn-secondary btn-sm">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&h=400&fit=crop" alt="Portfolio Website">
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>Personal portfolio website showcasing my projects, skills, and experience in data science and machine learning.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Web Development</span>
-                            <span class="project-tag">Portfolio</span>
-                        </div>
-                        <div class="project-buttons">
-                            <a href="https://ekmalrey.github.io" class="btn btn-primary btn-sm">Live Demo</a>
-                            <a href="https://github.com/EkmalRey/ekmalrey.github.io" class="btn btn-secondary btn-sm">View Code</a>
                         </div>
                     </div>
                 </div>
@@ -468,10 +438,16 @@
                 </div>
             </div>            <div class="footer">
                 <p>© 2025 Ekmal Reyhan. Built with HTML, CSS, and JavaScript.</p>
-            </div>
-        </div>
+            </div>        </div>
     </section>
 
-    <script src="assets/script.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
