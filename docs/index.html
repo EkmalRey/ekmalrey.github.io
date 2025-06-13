@@ -13,12 +13,257 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- External CSS with cache busting -->
+  <link rel="stylesheet" href="./css/style.css?v=2025061301">
+    <!-- Fallback critical CSS -->
+  <style>
+    /* Critical CSS for immediate render */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      line-height: 1.6;
+      background: #fafafa;
+      color: #1a1a1a;
+    }
+    
+    nav { 
+      position: fixed; 
+      top: 0; 
+      width: 100%; 
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      z-index: 1000; 
+      padding: 1rem 2rem; 
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    nav .logo { 
+      font-size: 1.5rem; 
+      font-weight: 700; 
+      color: #2563eb; 
+      text-decoration: none; 
+    }
+    
+    nav .nav-links { 
+      display: flex; 
+      align-items: center; 
+      gap: 2rem; 
+    }
+    
+    nav .nav-links a { 
+      text-decoration: none; 
+      color: #64748b; 
+      font-weight: 500; 
+      transition: color 0.3s; 
+    }
+    
+    nav .nav-links a:hover { 
+      color: #2563eb; 
+    }
+    
+    #toggle {
+      background: #e2e8f0;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    main { 
+      margin-top: 80px; 
+    }
+    
+    #home { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+      color: white; 
+      text-align: center; 
+      padding: 5rem 2rem; 
+      margin-top: 0;
+      margin: 0 auto 3rem;
+      max-width: 1200px;
+      border-radius: 16px;
+    }
+    
+    #home h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    #home h4 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    #home p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
+    
+    .btn:hover {
+      background: white;
+      color: #2563eb;
+      transform: translateY(-2px);
+    }
+    
+    .section {
+      padding: 5rem 2rem;
+      margin: 3rem auto;
+      max-width: 1200px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e2e8f0;
+    }
+    
+    .section h1 {
+      margin-bottom: 2rem;
+      color: #1a1a1a;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    
+    .about-card {
+      margin-top: 3rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .about-card h3 {
+      margin: 2rem 0 1rem 0;
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    
+    .about-card h3:first-child {
+      margin-top: 0;
+    }
+    
+    .about-card p {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+    }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .project-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      padding: 2rem;
+      border-radius: 16px;
+      transition: all 0.3s;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      border-color: #2563eb;
+    }
+    
+    .project-card h3 {
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    
+    .project-card p {
+      color: #64748b;
+      margin-bottom: 2rem;
+    }
+    
+    .project-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #2563eb;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    
+    .project-card a:hover {
+      background: #2563eb;
+      color: white;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .social-links a {
+      color: #64748b;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -101,11 +346,31 @@
   <footer>
     <p>© 2025 EkmalRey • Crafted with passion and precision ✨</p>
   </footer>
-
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   <!-- External JS -->
-  <script src="js/script.js"></script>
+  <script src="./js/script.js?v=2025061301"></script>
+  
+  <!-- CSS Loading Check -->
+  <script>
+    // Ensure CSS is loaded properly
+    window.addEventListener('load', function() {
+      const testElement = document.querySelector('#home');
+      if (testElement) {
+        const styles = window.getComputedStyle(testElement);
+        if (!styles.background || styles.background === 'rgba(0, 0, 0, 0)') {
+          console.warn('CSS may not be loading properly');
+          // Force reload CSS
+          const link = document.querySelector('link[href*="style.css"]');
+          if (link) {
+            const newLink = link.cloneNode();
+            newLink.href = link.href + '&reload=' + Date.now();
+            link.parentNode.insertBefore(newLink, link.nextSibling);
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
