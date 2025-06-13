@@ -1,0 +1,32 @@
+{
+  "name": "ekmalrey-portfolio",
+  "version": "1.0.0",
+  "description": "Modern portfolio website for EkmalRey - Data Scientist & AI Enthusiast",
+  "main": "docs/index.html",
+  "scripts": {
+    "build": "echo 'Building portfolio...' && echo 'Build complete!'",
+    "dev": "echo 'Starting development server...'",
+    "deploy": "echo 'Deploying to GitHub Pages...'"
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "machine-learning",
+    "ai",
+    "computer-vision"
+  ],
+  "author": "EkmalRey",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "terser": "^5.24.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
