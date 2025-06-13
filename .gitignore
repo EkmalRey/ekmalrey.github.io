@@ -44,3 +44,10 @@ logs
 # Backup files
 *.bak
 *.tmp
+
+# Resume
+portfolio-info.txt
+Resume_V1.pdf
+
+# Template
+TEMPLATE/

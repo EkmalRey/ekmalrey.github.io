@@ -1,376 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <meta name="description" content="EkmalRey - Data Scientist & AI Enthusiast Portfolio">
-  <title>EkmalRey | Data Scientist Portfolio</title>
-
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-  <!-- External CSS with cache busting -->
-  <link rel="stylesheet" href="./css/style.css?v=2025061301">
-    <!-- Fallback critical CSS -->
-  <style>
-    /* Critical CSS for immediate render */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body { 
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-      margin: 0; 
-      padding: 0; 
-      line-height: 1.6;
-      background: #fafafa;
-      color: #1a1a1a;
-    }
-    
-    nav { 
-      position: fixed; 
-      top: 0; 
-      width: 100%; 
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(20px);
-      z-index: 1000; 
-      padding: 1rem 2rem; 
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    
-    nav .logo { 
-      font-size: 1.5rem; 
-      font-weight: 700; 
-      color: #2563eb; 
-      text-decoration: none; 
-    }
-    
-    nav .nav-links { 
-      display: flex; 
-      align-items: center; 
-      gap: 2rem; 
-    }
-    
-    nav .nav-links a { 
-      text-decoration: none; 
-      color: #64748b; 
-      font-weight: 500; 
-      transition: color 0.3s; 
-    }
-    
-    nav .nav-links a:hover { 
-      color: #2563eb; 
-    }
-    
-    #toggle {
-      background: #e2e8f0;
-      border: none;
-      padding: 0.5rem;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    main { 
-      margin-top: 80px; 
-    }
-    
-    #home { 
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-      color: white; 
-      text-align: center; 
-      padding: 5rem 2rem; 
-      margin-top: 0;
-      margin: 0 auto 3rem;
-      max-width: 1200px;
-      border-radius: 16px;
-    }
-    
-    #home h2 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    
-    #home h4 {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      opacity: 0.9;
-    }
-    
-    #home p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.3s;
-    }
-    
-    .btn:hover {
-      background: white;
-      color: #2563eb;
-      transform: translateY(-2px);
-    }
-    
-    .section {
-      padding: 5rem 2rem;
-      margin: 3rem auto;
-      max-width: 1200px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      border: 1px solid #e2e8f0;
-    }
-    
-    .section h1 {
-      margin-bottom: 2rem;
-      color: #1a1a1a;
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-    }
-    
-    .about-card {
-      margin-top: 3rem;
-      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      padding: 2rem;
-      border-radius: 16px;
-      border: 1px solid #e2e8f0;
-    }
-    
-    .about-card h3 {
-      margin: 2rem 0 1rem 0;
-      color: #1a1a1a;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-    
-    .about-card h3:first-child {
-      margin-top: 0;
-    }
-    
-    .about-card p {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.95rem;
-      color: #1a1a1a;
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    
-    .project-card {
-      background: white;
-      border: 1px solid #e2e8f0;
-      padding: 2rem;
-      border-radius: 16px;
-      transition: all 0.3s;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-      border-color: #2563eb;
-    }
-    
-    .project-card h3 {
-      margin-bottom: 1rem;
-      color: #1a1a1a;
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-    
-    .project-card p {
-      color: #64748b;
-      margin-bottom: 2rem;
-    }
-    
-    .project-card a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid #2563eb;
-      border-radius: 50px;
-      transition: all 0.3s;
-    }
-    
-    .project-card a:hover {
-      background: #2563eb;
-      color: white;
-    }
-    
-    .social-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .social-links a {
-      color: #64748b;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid #e2e8f0;
-      border-radius: 50px;
-      transition: all 0.3s;
-    }
-    
-    .social-links a:hover {
-      border-color: #2563eb;
-      color: #2563eb;
-    }
-    
-    footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: #0f172a;
-      color: #e2e8f0;
-      margin-top: 4rem;
-    }
-  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekmal Reyhan - Data Scientist & AI Enthusiast</title>
+    <meta name="description" content="Data Scientist, ML Engineer, and Product Developer specializing in turning data into actionable insights">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div id="loader">
-    <div class="loader-spinner"></div>
-    <div>Loading your experience...</div>
-  </div>
-  <nav>
-    <a href="#home" class="logo">EkmalRey</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button id="toggle">🌙</button>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">EkmalRey</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Background Elements -->
+    <div class="bg-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-circle bg-circle-3"></div>
     </div>
-  </nav>
-
-  <main>    <section id="home" class="section float-animation" data-aos="fade-up">
-      <h2>Hi 👋, I'm Ekmal</h2>
-      <h4>Teaching machines to think, one algorithm at a time</h4>
-      <p>AI Enthusiast • Data Scientist • Computer Vision Specialist</p>
-      <a href="#about" class="btn">Discover My Journey</a>
-    </section>    <section id="about" class="section" data-aos="fade-up">
-      <h1>About Me</h1>
-      <p>🇮🇩 Based in Indonesia • Bachelor of Data Science @ Telkom University</p>
-      <p>Passionate about turning complex data into meaningful insights and building intelligent systems that make a difference. Currently seeking opportunities in AI/ML engineering, data science, and research positions.</p>
-
-      <div class="about-card">
-        <h3>Programming Languages</h3>
-        <p>Python • SQL • Go • Java • C++ • JavaScript</p>
-
-        <h3>ML/AI Tools & Frameworks</h3>
-        <p>TensorFlow • PyTorch • Scikit-learn • Pandas • NumPy • OpenCV</p>
-
-        <h3>Specializations</h3>
-        <p>Machine Learning • Computer Vision • Data Science • Backend Development</p>
-      </div>
-    </section>    <section id="projects" class="section" data-aos="fade-up">
-      <h1>Featured Projects</h1>
-      <div class="projects-grid">
-        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-          <h3>🚀 Image Classification Pipeline</h3>
-          <p>End-to-end machine learning pipeline for image classification using modern deep learning practices. Features automated data preprocessing, model training, and deployment capabilities.</p>
-          <a href="https://github.com/EkmalRey/ImgClassificationPipeline" target="_blank">View Project</a>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <div class="avatar-inner">ER</div>
+                </div>
+                <h1 class="hero-title">Ekmal Reyhan</h1>
+                <p class="hero-subtitle">AI Enthusiast &bull; Data Scientist &bull; Computer Vision Specialist</p>
+                <p class="hero-description">
+                    Passionate about turning complex data into meaningful insights and building intelligent systems that make a difference.
+                </p>
+                <div class="hero-social">
+                    <a href="https://linkedin.com/in/ekmalrey" class="social-link" target="_blank" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/EkmalRey" class="social-link" target="_blank" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/EkmalRey" class="social-link" target="_blank" title="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.363 3.678 1.344c-.98.98-1.213 2.092-1.272 3.373C2.013 5.668 2 6.077 2 12c0 5.923.013 6.332.072 7.613.059 1.281.292 2.393 1.272 3.373.98.98 2.092 1.213 3.373 1.272C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.281-.059 2.393-.292 3.373-1.272.98-.98 1.213-2.092 1.272-3.373.059-1.281.072-1.69.072-7.613 0-5.923-.013-6.332-.072-7.613-.059-1.281-.292-2.393-1.272-3.373-.98-.98-2.092-1.213-3.373-1.272C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                    </a>
+                </div>
+                <div class="hero-buttons">
+                    <a href="../Resume_V1.pdf" class="btn btn-primary" download>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Resume
+                    </a>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">View My Work</button>
+                </div>
+            </div>
         </div>
-
-        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-          <h3>🗄️ Backend Inventory System</h3>
-          <p>Robust backend system for efficient inventory management with real-time tracking, automated alerts, and comprehensive reporting features.</p>
-          <a href="https://github.com/Farrellhrs/BackendInventoryBarang" target="_blank">View Project</a>
-        </div>
-        
-        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-          <h3>🏥 Medical Management CLI</h3>
-          <p>Go-based command-line interface for managing patient records, medical packages, and healthcare workflows with secure data handling.</p>
-          <a href="https://github.com/EkmalRey/MedicalCheckUp" target="_blank">View Project</a>
-        </div>
-      </div>
-    </section>    <section id="contact" class="section" data-aos="fade-up">
-      <h1>Let's Connect</h1>
-      <div class="contact-content">
-        <p class="contact-email">
-          Ready to collaborate? Reach out:
-          <a href="mailto:ekmalreyhan@gmail.com">ekmalreyhan@gmail.com</a>
-        </p>
-        <div class="social-links">
-          <a href="https://linkedin.com/in/ekmalrey" target="_blank">
-            💼 LinkedIn
-          </a>
-          <a href="https://github.com/EkmalRey" target="_blank">
-            💻 GitHub
-          </a>
-          <a href="https://instagram.com/EkmalRey" target="_blank">
-            📷 Instagram
-          </a>
-        </div>
-      </div>
+        <button class="scroll-indicator" onclick="scrollToSection('about')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.41 8.84L12 13.42l4.59-4.58L18 10.25l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </button>
     </section>
-  </main>
-  <footer>
-    <p>© 2025 EkmalRey • Crafted with passion and precision ✨</p>
-  </footer>
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
-  <!-- External JS -->
-  <script src="./js/script.js?v=2025061301"></script>
-  
-  <!-- CSS Loading Check -->
-  <script>
-    // Ensure CSS is loaded properly
-    window.addEventListener('load', function() {
-      const testElement = document.querySelector('#home');
-      if (testElement) {
-        const styles = window.getComputedStyle(testElement);
-        if (!styles.background || styles.background === 'rgba(0, 0, 0, 0)') {
-          console.warn('CSS may not be loading properly');
-          // Force reload CSS
-          const link = document.querySelector('link[href*="style.css"]');
-          if (link) {
-            const newLink = link.cloneNode();
-            newLink.href = link.href + '&reload=' + Date.now();
-            link.parentNode.insertBefore(newLink, link.nextSibling);
-          }
-        }
-      }
-    });
-  </script>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Based in Indonesia &bull; Bachelor of Data Science at Telkom University
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-story glass-card">
+                    <h3>My Journey</h3>
+                    <p>Passionate about turning complex data into meaningful insights and building intelligent systems that make a difference. Currently seeking opportunities in AI/ML engineering, data science, and research positions.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">💻</div>
+                        <h4>Programming</h4>
+                        <p>Python, SQL, Go, Java, C++, JavaScript</p>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">🧠</div>
+                        <h4>ML/AI Tools</h4>
+                        <p>TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, OpenCV</p>
+                    </div>
+                    <div class="highlight-card glass-card">
+                        <div class="highlight-icon">🎯</div>
+                        <h4>Specializations</h4>
+                        <p>Machine Learning, Computer Vision, Data Science, Backend Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-description">
+                    A comprehensive toolkit for turning data into actionable insights and building innovative products
+                </p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">💻</div>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🧠</div>
+                        <h3>ML/AI Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">OpenCV</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🎯</div>
+                        <h3>Specializations</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Data Science</span>
+                        <span class="skill-tag">Backend Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    A showcase of my work in data science, machine learning, and backend development
+                </p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-card featured">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Image Classification Pipeline</h3>
+                            <span class="featured-badge">Featured</span>
+                        </div>
+                        <p>End-to-end machine learning pipeline for image classification using modern deep learning practices. Features automated data preprocessing, model training, and deployment capabilities.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">TensorFlow</span>
+                            <span class="project-tag">Deep Learning</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EkmalRey/ImgClassificationPipeline" class="btn btn-primary btn-sm" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <h3>Backend Inventory System</h3>
+                        <p>Robust backend system for efficient inventory management with real-time tracking, automated alerts, and comprehensive reporting features.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Go</span>
+                            <span class="project-tag">Backend</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/Farrellhrs/BackendInventoryBarang" class="btn btn-primary btn-sm" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <h3>Medical Management CLI</h3>
+                        <p>Go-based command-line interface for managing patient records, medical packages, and healthcare workflows with secure data handling.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Go</span>
+                            <span class="project-tag">CLI</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://github.com/EkmalRey/MedicalCheckUp" class="btn btn-primary btn-sm" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-description">
+                    My professional journey in data science and machine learning
+                </p>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item glass-card">
+                    <div class="experience-header">
+                        <div class="experience-main">
+                            <h3>Data Science Student</h3>
+                            <h4>Telkom University</h4>
+                        </div>
+                        <div class="experience-meta">
+                            <span class="experience-period">2021 - Present</span>
+                            <span class="experience-location">Indonesia</span>
+                        </div>
+                    </div>
+                    <p>Studying and working on projects in machine learning, computer vision, and backend development. Actively participating in research and open-source contributions.</p>
+                    <div class="achievements">
+                        <h5>Key Achievements</h5>
+                        <ul>
+                            <li>Developed multiple ML pipelines and backend systems</li>
+                            <li>Contributed to open-source projects</li>
+                            <li>Published research in data science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Ready to collaborate on your next data science project? Let's discuss how we can turn your data into actionable insights.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card glass-card">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always excited to discuss new opportunities, interesting projects, or just chat about the latest developments in data science and ML.</p>
+                        <div class="contact-items">
+                            <a href="mailto:ekmalreyhan@gmail.com" class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">ekmalreyhan@gmail.com</span>
+                                </div>
+                            </a>
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="glass-card" id="contactForm">
+                        <h3>Send a Message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" name="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" name="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" name="subject" placeholder="Project Collaboration" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer">
+                <p>© 2025 Ekmal Reyhan. Built with HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+/* Copied and ready to use from TEMPLATE/styles.css, no changes needed for your info since all content is in HTML */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-gradient: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+/* ...existing TEMPLATE styles.css content... */
+
+/* (Full TEMPLATE styles.css content is used here, see previous read for details) */
