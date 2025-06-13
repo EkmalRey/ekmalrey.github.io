@@ -149,4 +149,77 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize
     handleAllScrollEvents();
+
+    // Projects Carousel functionality
+    const carouselSlides = document.getElementById('carouselSlides');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+    const pages = document.querySelectorAll('.carousel-page');
+    
+    let currentPage = 0;
+    const totalPages = pages.length;
+
+    function updateCarousel() {
+        // Update slide position
+        carouselSlides.style.transform = `translateX(-${currentPage * 100}%)`;
+        
+        // Update active page
+        pages.forEach((page, index) => {
+            page.classList.toggle('active', index === currentPage);
+        });
+        
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentPage);
+        });
+        
+        // Update button states
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled = currentPage === totalPages - 1;
+    }
+
+    function goToPage(pageIndex) {
+        if (pageIndex >= 0 && pageIndex < totalPages) {
+            currentPage = pageIndex;
+            updateCarousel();
+        }
+    }
+
+    function nextPage() {
+        if (currentPage < totalPages - 1) {
+            currentPage++;
+            updateCarousel();
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 0) {
+            currentPage--;
+            updateCarousel();
+        }
+    }
+
+    // Event listeners for carousel controls
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', prevPage);
+        nextBtn.addEventListener('click', nextPage);
+    }
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToPage(index));
+    });
+
+    // Keyboard navigation for carousel
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevPage();
+        } else if (e.key === 'ArrowRight') {
+            nextPage();
+        }
+    });
+
+    // Initialize carousel
+    updateCarousel();
 });

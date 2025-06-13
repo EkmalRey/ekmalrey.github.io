@@ -217,61 +217,216 @@
                 <p class="section-description">
                     A showcase of my work in data science, machine learning, and product development
                 </p>
-            </div>            <div class="projects-grid">
-                <div class="project-card glass-card featured">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop" alt="Image Classification Pipeline">
+            </div>
+            
+            <div class="projects-carousel">
+                <div class="carousel-navigation">
+                    <button class="carousel-btn carousel-prev" id="prevBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" data-page="0"></span>
+                        <span class="indicator" data-page="1"></span>
+                        <span class="indicator" data-page="2"></span>
                     </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3>Image Classification Pipeline</h3>
-                            <span class="featured-badge">Featured</span>
-                        </div>
-                        <p>End-to-end machine learning pipeline for image classification using modern deep learning practices. Features automated data preprocessing, model training, and deployment capabilities.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">TensorFlow</span>
-                            <span class="project-tag">OpenCV</span>
-                            <span class="project-tag">Deep Learning</span>
-                            <span class="project-tag">Computer Vision</span>
-                        </div>                        <div class="project-buttons">
-                            <a href="https://github.com/EkmalRey/ImgClassificationPipeline" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
-                        </div>
-                    </div>
+                    <button class="carousel-btn carousel-next" id="nextBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
                 </div>
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=400&fit=crop" alt="Backend Inventory System">
-                    </div>
-                    <div class="project-content">
-                        <h3>Backend Inventory System</h3>
-                        <p>Robust backend system for efficient inventory management with real-time tracking, automated alerts, and comprehensive reporting features.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Backend</span>
-                            <span class="project-tag">Inventory Management</span>
-                            <span class="project-tag">Real-time Tracking</span>
-                            <span class="project-tag">API Development</span>
-                            <span class="project-tag">Database</span>
-                        </div>                        <div class="project-buttons">
-                            <a href="https://github.com/Farrellhrs/BackendInventoryBarang" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <!-- Page 1 -->
+                        <div class="carousel-page active">
+                            <div class="projects-grid">
+                                <div class="project-card glass-card featured">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop" alt="Image Classification Pipeline">
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-header">
+                                            <h3>Image Classification Pipeline</h3>
+                                            <span class="featured-badge">Featured</span>
+                                        </div>
+                                        <p>End-to-end ML pipeline for image classification with automated preprocessing and deployment capabilities.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">Python</span>
+                                            <span class="project-tag">TensorFlow</span>
+                                            <span class="project-tag">OpenCV</span>
+                                            <span class="project-tag">ML</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="https://github.com/EkmalRey/ImgClassificationPipeline" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=300&fit=crop" alt="Backend Inventory System">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Backend Inventory System</h3>
+                                        <p>Robust backend system for inventory management with real-time tracking and comprehensive reporting.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">Backend</span>
+                                            <span class="project-tag">API</span>
+                                            <span class="project-tag">Real-time</span>
+                                            <span class="project-tag">Database</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="https://github.com/Farrellhrs/BackendInventoryBarang" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=300&fit=crop" alt="Medical Management CLI">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Medical Management CLI</h3>
+                                        <p>Go-based CLI for managing patient records and healthcare workflows with secure data handling capabilities.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">Go</span>
+                                            <span class="project-tag">CLI</span>
+                                            <span class="project-tag">Healthcare</span>
+                                            <span class="project-tag">Security</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="https://github.com/EkmalRey/MedicalCheckUp" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="project-card glass-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop" alt="Medical Management CLI">
-                    </div>
-                    <div class="project-content">
-                        <h3>Medical Management CLI</h3>
-                        <p>Go-based command-line interface for managing patient records, medical packages, and healthcare workflows with secure data handling.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Go</span>
-                            <span class="project-tag">CLI</span>
-                            <span class="project-tag">Healthcare</span>
-                            <span class="project-tag">Data Security</span>
-                            <span class="project-tag">Medical Records</span>
-                        </div>                        <div class="project-buttons">
-                            <a href="https://github.com/EkmalRey/MedicalCheckUp" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+
+                        <!-- Page 2 -->
+                        <div class="carousel-page">
+                            <div class="projects-grid">
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop" alt="Data Analytics Dashboard">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Data Analytics Dashboard</h3>
+                                        <p>Interactive dashboard for visualizing complex datasets with real-time analytics and comprehensive insights.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">Python</span>
+                                            <span class="project-tag">Streamlit</span>
+                                            <span class="project-tag">Plotly</span>
+                                            <span class="project-tag">Analytics</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="btn btn-primary btn-sm">Coming Soon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=300&fit=crop" alt="AI Research Tool">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>AI Research Tool</h3>
+                                        <p>Advanced tool for AI researchers with model comparison, hyperparameter optimization, and results tracking.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">PyTorch</span>
+                                            <span class="project-tag">Research</span>
+                                            <span class="project-tag">MLOps</span>
+                                            <span class="project-tag">Optimization</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="btn btn-primary btn-sm">Coming Soon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="Portfolio Website">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Portfolio Website</h3>
+                                        <p>Modern, responsive portfolio website built with vanilla HTML, CSS, and JavaScript with advanced features.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">HTML/CSS</span>
+                                            <span class="project-tag">JavaScript</span>
+                                            <span class="project-tag">Responsive</span>
+                                            <span class="project-tag">UI/UX</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="https://github.com/EkmalRey/ekmalrey.github.io" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Page 3 -->
+                        <div class="carousel-page">
+                            <div class="projects-grid">
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=300&fit=crop" alt="Smart IoT System">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Smart IoT System</h3>
+                                        <p>Comprehensive IoT solution for smart home automation with sensor integration and mobile app control.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">IoT</span>
+                                            <span class="project-tag">Arduino</span>
+                                            <span class="project-tag">Mobile App</span>
+                                            <span class="project-tag">Sensors</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="btn btn-primary btn-sm">Coming Soon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=300&fit=crop" alt="Blockchain Platform">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Blockchain Platform</h3>
+                                        <p>Decentralized platform for secure transactions and smart contracts with advanced cryptographic features.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">Blockchain</span>
+                                            <span class="project-tag">Smart Contracts</span>
+                                            <span class="project-tag">Crypto</span>
+                                            <span class="project-tag">Security</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="btn btn-primary btn-sm">Coming Soon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-card glass-card">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=300&fit=crop" alt="Mobile Gaming App">
+                                    </div>
+                                    <div class="project-content">
+                                        <h3>Mobile Gaming App</h3>
+                                        <p>Cross-platform mobile game with multiplayer features, real-time synchronization, and engaging gameplay.</p>
+                                        <div class="project-tags">
+                                            <span class="project-tag">Mobile</span>
+                                            <span class="project-tag">Unity</span>
+                                            <span class="project-tag">Multiplayer</span>
+                                            <span class="project-tag">Gaming</span>
+                                        </div>
+                                        <div class="project-buttons">
+                                            <a href="#" class="btn btn-primary btn-sm">Coming Soon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
