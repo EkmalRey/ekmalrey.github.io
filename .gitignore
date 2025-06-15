@@ -1,19 +1,7 @@
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Build outputs
-build/
-dist/
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Personal/Private files (keep these out of public repo)
+portfolio-info.txt
+Resume_V1.pdf
+portfolio-data.yaml
 
 # IDE/Editor files
 .vscode/
@@ -35,19 +23,12 @@ Thumbs.db
 logs
 *.log
 
-# Cache
-.cache/
-.parcel-cache/
-.next/
-.nuxt/
-
 # Backup files
 *.bak
 *.tmp
+*~
 
-# Resume
-portfolio-info.txt
-Resume_V1.pdf
-
-# Template
+# Template/Draft folders
 TEMPLATE/
+drafts/
+notes/
